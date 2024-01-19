@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap"); /*import de família de fonte do google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap"); /*import de família de fonte do google fonts*/
+
+:root {
+	--cor1: #000000;
+	--cor2: #ffffff;
+	--fonte-padrao: Verdana, sans-serif;
+	--fonte-passion: "Passion One", cursive;
+	--fonte-sriracha: "Sriracha", cursive;
+}
+
+*/*alteração na página inteira*/ {
+	margin: 0px; /*zera a margem da página inteira*/
+	padding: 0px; /*zera o espaçamento da página inteira*/
+}
+html,
+body/*alteração no corpo da página*/ {
+	min-height: 100vh; /*a altura minima do elemento deve ser 100% da viewport height*/
+	background-color: darkgrey; /*altera a cor de fundo enquanto a página não é 100% carregada*/
+	font-family: var(--fonte-padrao); /*altera a família da fonte*/
+	font-size: 1em; /*seta o tamanho da letra da página inteira para o tamanho padrão*/
+}
+header /*alteração no cabeçalho*/ {
+	background-color: var(--cor1); /*cor de fundo*/
+	color: var(--cor2); /*cor da letra*/
+	min-height: 290px; /*previne que o tamanho fique pequeno demais em telas menores*/
+	text-align: center; /*centralização do texto*/
+}
+header > h1 /*alteração em todo h1 que está dentro do cabeçalho*/ {
+	font-family: var(--fonte-passion); /*altera a família da fonte*/
+	font-size: 10vw; /*faz com que a letra siga o tamanho da viewport*/
+	font-variant: small-caps; /*todas as letras minusculas são transformadas em maiúsculas*/
+	padding-top: 50px; /*espaçamento no topo*/
+}
+a /*alteração em todo link*/ {
+	color: var(--cor2); /*altera a cor da letra*/
+	font-family: var(--fonte-padrao); /*altera a família da fonte*/
+	text-decoration: none; /*retira a linha embaixo do link*/
+	font-weight: bolder; /*deixa o texto com aspecto de negrito*/
+}
+a:hover /*quando coloca o mouse em cima de um link*/ {
+	text-decoration: underline; /*coloca a linha embaixo do link*/
+}
+section /*alteração em toda section*/ {
+	font-family: var(--fonte-sriracha); /*altera a família da fonte*/
+	padding: 10vh 0vh 10vh 30px; /*espaçamento topo direita baixo esquerda*/
+	line-height: 2em; /*espaçamento entre uma linha e outra*/
+	font-size: 3.5vw; /*faz com que a letra siga o tamanho da viewport*/
+}
+
+section.normal /*alteração em toda classe 'normal' que está dentro de uma section*/ {
+	background-color: var(--cor2); /*altera cor do plano de fundo*/
+}
+section.normal > .duplo {
+	padding-bottom: 2em;
+}
+section.imagem /*alteração em toda classe 'imagem' que está dentro de uma section*/ {
+	color: var(--cor2); /*altera cor da letra*/
+	background-size: cover;
+	background-attachment: fixed;
+}
+section.imagem > p /*alterações em todo parágrafo que está dentro de uma section com a classe 'imagem*/ {
+	padding: 5px; /*espaçamento em todos os lados*/
+	display: inline-block; /* faz com que o fundo acompanhe o tamanho do parágrafo*/
+	background-color: #00000063; /*altera a cor do fundo*/
+	text-shadow: 2px 2px 0px #000000a8;
+}
+section#img01 {
+	background-image: url(imagens/background001.jpg);
+	background-position: right center;
+}
+section#img02 {
+	background-image: url(imagens/background002.jpg);
+	background-position: right center;
+}
+footer /*alterações no rodapé da página*/ {
+	font-family: var(--fonte-padrao); /*altera a família da fonte*/
+	background-color: var(--cor1); /*altera a cor de fundo da imagem*/
+	color: var(--cor2); /*altera a cor da letra*/
+	padding: 10px; /*espaçamento em todo os lados*/
+	text-align: center; /*alinhamento do texto*/
+}
